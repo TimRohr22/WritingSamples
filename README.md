@@ -1,7 +1,7 @@
 # Guide to Writing Samples in this Repo
 Thank you for visiting my Writing Sample repository. I have included three samples of my writing demonstrating varying levels of formality. Each sample was written for a very different intended audience and with a different purpose.
 
-## InsertArg Script Forum Post
+## [InsertArg Script Forum Post](https://github.com/TimRohr22/WritingSamples/blob/main/InsertArg%20Script%20Forum%20Post.md)
 This is a forum post introducing users of a VTT RPG site to a new add-on script. The post discusses usage and syntax of the script, and is intended for users with a small amount of technical knowledge, already. The tone is conversational and informal.
 
 ## Managing Rights in SharePoint with Groups (Part 1)
