@@ -21,15 +21,15 @@
 <tbody>
 <tr>
 <td><strong>Abstract</strong></td>
-<td>Best Practices post for SharePoint administration.</td>
+<td>The first in a three-part series of articles discussing SharePoint security, focusing on how to manage access to SharePoint resources using groups. This article introduces the topic of rights inheritance and discusses how it applies to real world examples.</td>
 </tr>
 <tr>
 <td><strong>Audience</strong></td>
-<td>Existing SharePoint users who are now site admins.</td>
+<td>Professional, enterprise-wide audience of SharePoint users.</td>
 </tr>
 <tr>
 <td><strong>Tone</strong></td>
-<td>Corporate Casual</td>
+<td>Corporate Informal</td>
 </tr>
 <tr>
 <td></td>
@@ -52,13 +52,13 @@
 <h3 id="the-solutions">The Solutions</h3>
 <p>That leaves us with two arrangements that could satisfy both our need for providing varying levels of access for different groups, and our need to limit the potential loss of data by poorly designed rights.</p>
 <p>The first option is to put the <strong>Site Owners</strong> group as the top-level owner of any series of groups limiting access to those resources. For instance, if you create the group <strong>Department Daily Use</strong> and give it rights to view certain resources, you could designate the <strong>Site Owners</strong> group as its owner, allowing anyone in <strong>Site Owners</strong> to administer membership in the <strong>Department Daily Use</strong> group.</p>
-<p><img src="https://github.com/TimRohr22/WritingSamples/blob/main/images/sp_simple_ownership.png?raw=true" alt="Diagram of simple group ownership"></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/TimRohr22/WritingSamples/refs/heads/main/images/sp_simple_ownership.png" alt="Diagram of simple group ownership" width="500px"></p>
 <p>Or if there was a single <strong>Department Admin</strong> group responsible for the administration of various other departmental groups (including <strong>Department Daily Use</strong> and <strong>Department Editors</strong>), it could be the owner of those other groups, while having the <strong>Site Owners</strong> group as its owner.</p>
-<p><img src="https://github.com/TimRohr22/WritingSamples/blob/main/images/sp_intermediate_ownership.png?raw=true" alt="Diagram of intermediate group ownership"></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/TimRohr22/WritingSamples/refs/heads/main/images/sp_intermediate_ownership.png" alt="Diagram of intermediate group ownership" width="500px"></pstyle="text-align:center;">
 <p>The idea, here, is that a group like the <strong>Site Owners</strong> is the top group in the chain of ownership. This arrangement works if there is no need to limit a member of the <strong>Site Owners</strong> from being able to manage a resource. That is, if every member of the <strong>Site Owners</strong> group is authorized to view everything on a site, there is no reason why <strong>Site Owners</strong> couldn’t own and administer other groups.</p>
 <p>However, if there is a reason to wall off a portion of the site from even members of the <strong>Site Owners</strong> group (for instance, an IT&amp;S employee in the <strong>Site Owners</strong> group might not be authorized to view certain HIPAA information stored on the site), then you need to do things in a slightly different way.</p>
 <p>In this case, you would follow the pattern of having the <strong>Department Admin</strong> group owning the lower tier groups (<strong>Department Daily Use</strong> and <strong>Department Editors</strong>), but you would designate the <strong>Department Admin</strong> group to be the owner of itself. By creating this ownership structure, you will have effectively created an admin group for everything downstream of where you broke inheritance, limiting what can be seen by any site-level group.</p>
-<p><img src="https://github.com/TimRohr22/WritingSamples/blob/main/images/sp_group_owning_itself.png?raw=true" alt="Diagram of group owning itself in group hierarchy"></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/TimRohr22/WritingSamples/refs/heads/main/images/sp_group_owning_itself.png" alt="Diagram of group owning itself in group hierarchy" width="500px"></pstyle="text-align:center;">
 <h2 id="applying-the-model---planning">Applying the Model - Planning</h2>
 <p>As you think about how to grant or limit rights to the data you are responsible for safeguarding, think about the different sets of people who will need access, and the different levels of access they will need. Think also about who should administer those groups, and whether you need to limit rights even to the owners of the site. Once you have a plan for what sort of groups and privileges you need to create, continue on to <strong>Part 2</strong> of this series, where we’ll walk through the steps involved in creating the groups you need.</p>
 </div>
